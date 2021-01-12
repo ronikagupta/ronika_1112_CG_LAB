@@ -1,0 +1,54 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+ 
+int main(){
+   int gd = DETECT,gm;
+   int x ,y;
+   initgraph(&gd, &gm, "C:\\TC\\BGI");
+   /* Initialize center of circle with center of screen */
+   x = getmaxx()/2;
+   y = getmaxy()/2;
+ 
+   outtextxy(240, 50, "Concentric Circles");
+   /* Draw circles on screen */
+   setcolor(RED);
+   circle(x, y, 30);
+   setcolor(GREEN);
+   circle(x, y, 50);
+   setcolor(YELLOW);
+   circle(x, y, 70);
+   setcolor(BLUE);
+   circle(x, y, 90);
+ 
+   getch();
+   closegraph();
+   return 0;
+}
